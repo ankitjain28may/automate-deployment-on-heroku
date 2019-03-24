@@ -4,6 +4,14 @@ node_js:
 - 8
 - 10
 before_install:
-- npm install
+- npm install -g npm
 script:
+- npm install
 - npm run pretest
+deploy:
+  provider: heroku
+  api_key:
+    secure: h31a+6sjMSoVVMzA6ChGK7edEjD+/NbxkGwaZgKTrI/Xp4pssDhh+lDCxI2EwjAX5d7jhuIQazvHK74lTC36nf2DYR41MG1Ut+SzpraRJSLJxvjfDEQ3gcfaH4QYmx3vM4oAL4hEekTejlr4mnpQBx/hmtxfoASigLg1xV+q/2cTj7dIsEGX/9MYQN+geKZhpwI8ktmvjWy45iYmWDpdiG0iRUzy0f9ArUiyr4I31P4df72opO0o0Ptf5fM5cN6o1/q8RXOXgTvIHbhStBiQoov8O4fLw8uG9r2rgfofq2icZDjR/L4NsL7TDVyNLQEHTmK0MqsKSyi9D/ALrfx1y4q/pk/2zWX+KjgNJmba2ZB3JCnvrxo6ePwRk8sfbLZLW8zn7j6Q+UyIyQ3U5CjjYY9dU52NFRs/55OthFt26ZeAmJZWXb2NGRZtjyWYvShoMr7qpXn57dF3dkrTzH2ClVm/FM6Z+sXxvhRHPqhLI3Lz8lvlzb1KPjsek+Didf4l9AOmQmOR26uyTkcxUz0JgQdkP2ZrbCvgeAu+6T3yrlbPfDroEz9R9fAodJbCLEoqHlze4qeOHpFT0wC6dwE9GvtytjWupJCbHc6uAHmXfLamM6d80KJTS8Nqdv9Yn+zAPIa0qQj0077wzFaW/bzPNzClGwyXtOjYidioYe4UdAs=
+  app: automate-heorku
+  on:
+    repo: ankitjain28may/automate-deployment-on-heroku
