@@ -1,0 +1,12 @@
+# .travis.yml
+
+language: node.js
+node.js:
+-7
+-8
+-10
+before_install:
+-npm install -g npm
+scripts:
+-npm install
+-npm run pretest
